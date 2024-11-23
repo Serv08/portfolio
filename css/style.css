@@ -68,7 +68,7 @@ main h1 {
 /* Responsive Adjustments for Mobile Devices */
 @media (max-width: 768px) {
   .filter-buttons {
-    margin: 30px 0; /* Adds more vertical spacing */
+    margin: 20px 0; /* Adds more vertical spacing */
   }
 
   .filter-buttons button {

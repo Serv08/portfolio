@@ -17,59 +17,63 @@
     </nav>
   </header>
   <main>
-    <h1>Projects</h1>
-    <div class="filter-buttons">
-      <button class="filter-btn" onclick="filterProjects('all')">All</button>
-      <button class="filter-btn" onclick="filterProjects('Automation')">Automation</button>
-      <button class="filter-btn" onclick="filterProjects('Web Development')">Web Development</button>
-      <button class="filter-btn" onclick="filterProjects('IoT')">IoT</button>
-      <button class="filter-btn" onclick="filterProjects('Data Analysis')">Data Analysis</button>
-    </div>
-
-    <div class="project-grid">
-      <div class="project-card" data-category="Automation">
-        <img src="images/web-scraper.png" alt="Web Scraper">
-        <h2>Web Scraper</h2>
-        <p>Category: Automation</p>
-        <a href="https://github.com/yourusername/web-scraper" target="_blank">View Project</a>
+    <section class="filter-buttons">
+      <button data-category="all">All</button>
+      <button data-category="web">Web Development</button>
+      <button data-category="iot">IoT</button>
+      <button data-category="data">Data Engineering and Analysis</button>
+    </section>
+    <section class="project-list">
+      <div class="project-box" data-category="web iot">
+        <img src="img\pokemon-database-icon-filled-256.png" alt="Smart Home Dashboard">
+        <h3>Smart Home Dashboard</h3>
+        <div class="project-categories">
+          <span class="project-category">Web Development</span>
+          <span class="project-category">IoT</span>
+        </div>
+        <a href="https://github.com/Serv08/pokemon-web-scrape" target="_blank"><strong>Source Code</strong></a>
       </div>
-
-      <div class="project-card" data-category="Web Development">
-        <img src="images/portfolio.png" alt="Portfolio Website">
-        <h2>Portfolio Website</h2>
-        <p>Category: Web Development</p>
-        <a href="https://yourportfolio.com" target="_blank">View Project</a>
+      <div class="project-box" data-category="data">
+        <img src="path/to/image2.jpg" alt="Sales Dashboard">
+        <h3>Sales Dashboard</h3>
+        <div class="project-categories">
+          <span class="project-category">Data Analysis</span>
+        </div>
+        <a href="https://example.com" target="_blank"><strong>Source Code</strong></a>
       </div>
-
-      <div class="project-card" data-category="IoT">
-        <img src="images/iot-dashboard.png" alt="IoT Dashboard">
-        <h2>IoT Dashboard</h2>
-        <p>Category: IoT</p>
-        <a href="https://github.com/yourusername/iot-dashboard" target="_blank">View Project</a>
+      <div class="project-box" data-category="iot">
+        <img src="path/to/image3.jpg" alt="IoT Monitoring System">
+        <h3>IoT Monitoring System</h3>
+        <div class="project-categories">
+          <span class="project-category">IoT</span>
+        </div>
+        <a href="https://example.com" target="_blank"><strong>Source Code</strong></a>
       </div>
-
-      <div class="project-card" data-category="Data Analysis">
-        <img src="images/iot-dashboard.png" alt="EDA">
-        <h2>Exploratory Data Analysis of Wildlife Airstrike</h2>
-        <p>Category: Data Analysis</p>
-        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank">View Project</a>
+      <div class="project-box" data-category="data">
+        <img src="path/to/image3.jpg" alt="Exploratory Data Analysis of Wildlife Airstrike">
+        <h3>Exploratory Data Analysis of Wildlife Airstrike</h3>
+        <div class="project-categories">
+          <span class="project-category">Data Analysis</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank"><strong>Source Code</strong></a>
       </div>
-
-      <div class="project-card" data-category="Data Analysis">
-        <img src="images/iot-dashboard.png" alt="EDA">
-        <h2>Exploratory Data Analysis of Wildlife Airstrike</h2>
-        <p>Category: Data Analysis</p>
-        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank">View Project</a>
+      <div class="project-box" data-category="data">
+        <img src="path/to/image3.jpg" alt="Exploratory Data Analysis of Wildlife Airstrike">
+        <h3>Exploratory Data Analysis of Wildlife Airstrike</h3>
+        <div class="project-categories">
+          <span class="project-category">Data Analysis</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank"><strong>Source Code</strong></a>
       </div>
-
-      <div class="project-card" data-category="Data Analysis">
-        <img src="images/iot-dashboard.png" alt="EDA">
-        <h2>Exploratory Data Analysis of Wildlife Airstrike</h2>
-        <p>Category: Data Analysis</p>
-        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank">View Project</a>
+      <div class="project-box" data-category="data">
+        <img src="img\wildlife-airstrike-deck.png" alt="Exploratory Data Analysis of Wildlife Airstrike">
+        <h3>Exploratory Data Analysis of Wildlife Airstrike</h3>
+        <div class="project-categories">
+          <span class="project-category">Data Analysis</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank"><strong>Source Code</strong></a>
       </div>
-    </div>
-
+    </section>
   </main>
   <script src="js/script.js"></script>
 </body>

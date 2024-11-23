@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Projects</h1>
+    <div class="filter-buttons">
+      <button class="filter-btn" onclick="filterProjects('all')">All</button>
+      <button class="filter-btn" onclick="filterProjects('Automation')">Automation</button>
+      <button class="filter-btn" onclick="filterProjects('Web Development')">Web Development</button>
+      <button class="filter-btn" onclick="filterProjects('IoT')">IoT</button>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card" data-category="Automation">
+        <img src="images/web-scraper.png" alt="Web Scraper">
+        <h2>Web Scraper</h2>
+        <p>Category: Automation</p>
+        <a href="https://github.com/yourusername/web-scraper" target="_blank">View Project</a>
+      </div>
+
+      <div class="project-card" data-category="Web Development">
+        <img src="images/portfolio.png" alt="Portfolio Website">
+        <h2>Portfolio Website</h2>
+        <p>Category: Web Development</p>
+        <a href="https://yourportfolio.com" target="_blank">View Project</a>
+      </div>
+
+      <div class="project-card" data-category="IoT">
+        <img src="images/iot-dashboard.png" alt="IoT Dashboard">
+        <h2>IoT Dashboard</h2>
+        <p>Category: IoT</p>
+        <a href="https://github.com/yourusername/iot-dashboard" target="_blank">View Project</a>
+      </div>
+
+      <div class="project-card" data-category="Data Analysis">
+        <img src="images/iot-dashboard.png" alt="EDA">
+        <h2>Exploratory Data Analysis of Wildlife Airstrike</h2>
+        <p>Category: IoT</p>
+        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank">View Project</a>
+      </div>
+
+      <div class="project-card" data-category="Data Analysis">
+        <img src="images/iot-dashboard.png" alt="EDA">
+        <h2>Exploratory Data Analysis of Wildlife Airstrike</h2>
+        <p>Category: IoT</p>
+        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank">View Project</a>
+      </div>
+
+      <div class="project-card" data-category="Data Analysis">
+        <img src="images/iot-dashboard.png" alt="EDA">
+        <h2>Exploratory Data Analysis of Wildlife Airstrike</h2>
+        <p>Category: IoT</p>
+        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank">View Project</a>
+      </div>
+    </div>
+
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>

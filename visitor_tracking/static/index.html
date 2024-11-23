@@ -62,5 +62,21 @@
     <p>Hello! I’m [Your Name], a passionate developer with expertise in automation, web development, and IoT solutions. Welcome to my portfolio!</p>
     <a href="home.html" class="welcome-button">Proceed to Home</a>
   </div>
+
+  
+  <p class="visitor-count">Total Visitors: <span id="visitor-count">Loading...</span></p>
+  
+  <script>
+    fetch('/tracker/log-visitor/')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visitor-count').innerText = data.visitor_count;
+      })
+      .catch(err => {
+        console.error('Error fetching visitor count:', err);
+      });
+  </script> 
+  
+
 </body>
 </html>

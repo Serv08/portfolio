@@ -24,7 +24,7 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   padding: 0;
 }
 
@@ -36,6 +36,26 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 5px 10px; /* Add padding for a cleaner look */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+  color: black;
+  background-color: white; /* Adds a hover effect for all buttons */
+  border-radius: 5px; /* Slight rounding for a modern look */
+}
+
+nav ul li#contact a {
+  background-color: #9dc8f6; /* Unique background color for the contact item */
+  color: black; /* Contrast text color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 8px 15px; /* Slightly larger padding for emphasis */
+}
+
+nav ul li#contact a:hover {
+  background-color: #014792; /* Darker shade on hover */
+  color: white; /* Invert text color on hover */
 }
 
 main {
@@ -57,6 +77,17 @@ main h1 {
   top: 60px; /* Adjust based on the height of the sticky navigation bar */
   z-index: 900; /* Ensures it appears above content but below the navigation bar */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  animation: fadeInDown 0.6s ease-in-out;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .filter-buttons button {
@@ -251,6 +282,7 @@ main h1 {
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease-in-out;
 }
 
 #about-me h2, #skills h2 {
@@ -379,5 +411,61 @@ main h1 {
   height: 180px;
   padding: 20px;
   -webkit-animation: mover 2s infinite  alternate;
-  animation: mover 2s infinite  alternate;
+  animation: fadeInImage 2s ease-in-out, mover 2s infinite  alternate;
+}
+@keyframes fadeInImage {
+  0% {
+    opacity: 0; /* Start fully transparent */
+    transform: scale(0.9); /* Optional: Slightly smaller scale for a zoom effect */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
+  }
+}
+
+
+
+
+/* Contact Overlay */
+#contact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0; /* Start hidden */
+  pointer-events: none; /* Prevent interactions when not visible */
+  transition: opacity 0.3s ease; /* Smooth fade-in and fade-out */
+}
+
+/* Show the overlay when active */
+#contact-overlay.active {
+  opacity: 1;
+  pointer-events: all; /* Allow interactions */
+}
+
+/* Contact Box */
+#contact-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  max-width: 90%; /* Adjust for mobile responsiveness */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: scale(0.8); /* Start slightly smaller */
+  opacity: 0; /* Hidden initially */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+}
+
+/* Show the box when overlay is active */
+#contact-overlay.active #contact-box {
+  transform: scale(1); /* Scale up */
+  opacity: 1; /* Fully visible */
 }

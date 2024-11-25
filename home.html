@@ -12,10 +12,29 @@
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li id="contact"><a href="#" onclick="toggleContactBox()">Contacts</a></li>
       </ul>
     </nav>
+
+    <!-- Floating Contact Box -->
+    <div id="contact-overlay">
+      <div id="contact-box">
+        <div id="contact-content">
+          <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+          <p>Phone: <a href="tel:+123456789">+123 456 789</a></p>
+          <p>
+            Social Media:
+            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   </header>
+
   <main>
     <section id="intro">
       <div class="intro-text">
@@ -90,6 +109,7 @@
       </div>
     </section>
     
+
 
   </main>
   <script src="js/script.js"></script>

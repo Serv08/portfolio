@@ -12,63 +12,131 @@
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li id="contact"><a href="#" onclick="toggleContactBox()">Contacts</a></li>
       </ul>
     </nav>
+
+    <!-- Floating Contact Box -->
+    <div id="contact-overlay">
+      <div id="contact-box">
+        <div id="contact-content">
+          <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+          <p>Phone: <a href="tel:+123456789">+123 456 789</a></p>
+          <p>
+            Social Media:
+            <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </header>
   <main>
-    <h1>Projects</h1>
-    <div class="filter-buttons">
-      <button class="filter-btn" onclick="filterProjects('all')">All</button>
-      <button class="filter-btn" onclick="filterProjects('Automation')">Automation</button>
-      <button class="filter-btn" onclick="filterProjects('Web Development')">Web Development</button>
-      <button class="filter-btn" onclick="filterProjects('IoT')">IoT</button>
-    </div>
-
-    <div class="project-grid">
-      <div class="project-card" data-category="Automation">
-        <img src="images/web-scraper.png" alt="Web Scraper">
-        <h2>Web Scraper</h2>
-        <p>Category: Automation</p>
-        <a href="https://github.com/yourusername/web-scraper" target="_blank">View Project</a>
+    <section class="filter-buttons">
+      <button data-category="all">All</button>
+      <button data-category="data">Data</button>
+      <button data-category="web">Web Development</button>
+      <button data-category="iot">IoT</button>
+      <button data-category="robot">Robotics</button>
+      <button data-category="school">School Works</button>
+      <button data-category="soft_dev">Software Development</button>
+      
+    </section>
+    <section class="project-list">
+      <div class="project-box" data-category="data">
+        <img src="img\projects\dbt_snowflake_airflow.png" alt="Smart Home Dashboard">
+        <h3>ELT with Snowflake, DBT, and Airflow</h3>
+        <div class="project-categories">
+          <span class="tools">elt</span>
+          <span class="tools">dbt</span>
+          <span class="tools">airflow</span>
+          <span class="tools">wsl</span>
+          <span class="tools">data engineering</span>
+          An ELT pipeline that extracts sample data set from Snowflake, transforms it using dbt, and orchestrate the pipeline using Airflow.
+        </div>
+        <a href="https://github.com/Serv08/dbt-snowflake-airflow-pipeline" target="_blank"><strong>Source Code</strong></a>
+        <!-- <a href="https://github.com/Serv08/dbt-snowflake-airflow-pipeline" target="_blank"><strong>Test</strong></a> -->
       </div>
 
-      <div class="project-card" data-category="Web Development">
-        <img src="images/portfolio.png" alt="Portfolio Website">
-        <h2>Portfolio Website</h2>
-        <p>Category: Web Development</p>
-        <a href="https://yourportfolio.com" target="_blank">View Project</a>
+      <div class="project-box" data-category="data">
+        <img src="img\projects\pokemon-database-icon-filled-256.png" alt="Smart Home Dashboard">
+        <h3>Pokemon Pokedex Data Scrape</h3>
+        <div class="project-categories">
+          <span class="tools">BeautifulSoup</span>
+          <span class="tools">Pandas</span>
+          <span class="tools">SQLite</span>
+          <span class="tools">matplotlib</span>
+          <span class="tools">data scraping</span>
+          Web scraping project that scrapes data from the Pokemon Website and stores it in a database.
+        </div>
+        <a href="https://github.com/Serv08/pokemon-web-scrape" target="_blank"><strong>Source Code</strong></a>
       </div>
 
-      <div class="project-card" data-category="IoT">
-        <img src="images/iot-dashboard.png" alt="IoT Dashboard">
-        <h2>IoT Dashboard</h2>
-        <p>Category: IoT</p>
-        <a href="https://github.com/yourusername/iot-dashboard" target="_blank">View Project</a>
+      <div class="project-box" data-category="iot robot school">
+        <img src="img\projects\ROBO_HOBO.png" alt="Sales Dashboard">
+        <h3>Robo Hobo</h3>
+        <div class="project-categories">
+          <span class="tools">ros2</span>
+          <span class="tools">raspberry pi</span>
+          <span class="tools">arduino</span>
+          <span class="tools">linux</span>
+          <span class="tools">freecad</span>
+          <span class="tools">facial recognition</span>
+          An innovative intruder detection system that detect and alert users of potential intruders. 
+        </div>
+        <a href="https://github.com/The-Robo-Hobo/Robo-Hobo-Public" target="_blank"><strong>Source Code</strong></a>
       </div>
 
-      <div class="project-card" data-category="Data Analysis">
-        <img src="images/iot-dashboard.png" alt="EDA">
-        <h2>Exploratory Data Analysis of Wildlife Airstrike</h2>
-        <p>Category: IoT</p>
-        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank">View Project</a>
+      <div class="project-box" data-category="robot school">
+        <img src="img\projects\apolaki.jpg" alt="Sales Dashboard">
+        <h3>Apolaki: A Time-Based Auto-Dimming Room Light</h3>
+        <div class="project-categories">
+          <span class="tools">arduino</span>
+          A time-based auto-dimming room light as our final project for Embedded System.
+        </div>
+        <a href="https://github.com/The-Robo-Hobo/Apolaki" target="_blank"><strong>Source Code</strong></a>
       </div>
 
-      <div class="project-card" data-category="Data Analysis">
-        <img src="images/iot-dashboard.png" alt="EDA">
-        <h2>Exploratory Data Analysis of Wildlife Airstrike</h2>
-        <p>Category: IoT</p>
-        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank">View Project</a>
+      <div class="project-box" data-category="web">
+        <img src="img\projects\Grad_me.jpg" alt="Personal Portfolio">
+        <h3>Portfolio Website</h3>
+        <div class="project-categories">
+          <span class="tools">html</span>
+          <span class="tools">css</span>
+          <span class="tools">javascript</span>
+          <span class="tools">github pages</span>
+          This is my personal portfolio website. 
+        </div>
+        <a href="https://serv08.github.io/portfolio/index.html" target="_blank"><strong>Link</strong></a>
       </div>
 
-      <div class="project-card" data-category="Data Analysis">
-        <img src="images/iot-dashboard.png" alt="EDA">
-        <h2>Exploratory Data Analysis of Wildlife Airstrike</h2>
-        <p>Category: IoT</p>
-        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank">View Project</a>
+      <div class="project-box" data-category="data school">
+        <img src="img\projects\wildlife-airstrike-deck.png" alt="Exploratory Data Analysis of Wildlife Airstrike">
+        <h3>Exploratory Data Analysis of Wildlife Airstrike</h3>
+        <div class="project-categories">
+          <span class="tools">data analysis</span>
+          <span class="tools">pandas</span>
+          <span class="tools">tableau</span>
+          <span class="tools">matplotlib</span>
+          <span class="tools">data analysis</span>
+          An exploratory data analysis of wildlife airstrike data. 
+        </div>
+        <a href="https://drive.google.com/file/d/1HSEgx9KaJxoB8GH2QgPZQz3cfUYkSELw/view?usp=sharing" target="_blank"><strong>PDF Report</strong></a>
       </div>
-    </div>
 
+      <div class="project-box" data-category="web school">
+        <img src="img\projects\mundane-coffee-cropped.jpg" alt="Personal Portfolio">
+        <h3>Jake's Coffee Shop</h3>
+        <div class="project-categories">
+          <span class="tools">html</span>
+          <span class="tools">css</span>
+          <span class="tools">javascript</span>
+          A little coffee shop website for our Computer Engineering Technology course.
+        </div>
+        <a href="https://github.com/Serv08/Jake-Coffee-Shop" target="_blank"><strong>Source Code</strong></a>
+      </div>
+
+    </section>
   </main>
   <script src="js/script.js"></script>
 </body>

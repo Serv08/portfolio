@@ -25,6 +25,11 @@
   }
 }
 
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+  }
+
 
 /* About Me and Skills Section */
 #about-me, #skills {
@@ -78,7 +83,6 @@
 #experience .dropdown-box {
   animation: fadeInUp 2s;
 }
-
 
 .dropdown-btn:hover {
   background-color: #0056b3; /* Darker blue on hover */

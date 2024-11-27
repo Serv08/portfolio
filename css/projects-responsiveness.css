@@ -1,0 +1,19 @@
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+
+  input#search-input {
+    display: block;
+    width: 90%; /* Adjust width as needed */
+    margin: 0 auto;
+  }
+  
+  .filter-buttons {
+    margin: 5px 0; /* Adds more vertical spacing */
+  }
+
+  .filter-buttons button {
+    padding: 10px 15px; /* Increased padding for larger touch areas on mobile */
+    margin: 5px; /* Adds more vertical spacing between buttons */
+    font-size: 0.9rem; /* Slightly larger font size for better readability */
+  }
+}

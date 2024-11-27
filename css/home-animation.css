@@ -1,0 +1,85 @@
+/* 
+  ===========================
+  Home Page
+  ===========================
+*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0; /* Start fully transparent */
+    transform: scale(0.9); /* Optional: Slightly smaller scale for a zoom effect */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
+  }
+}
+
+
+/* About Me and Skills Section */
+#about-me, #skills {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+  
+.skills-box {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-box:hover {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.skills-box span {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.dropdown-toggle {
+  transition: transform 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
+
+.skills-category.active .dropdown-toggle {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Make the transition smoother */
+}
+
+.skills-category.active .dropdown-content {
+  max-height: 500px; /* Adjust based on the size of your content */
+  opacity: 1; /* Make it visible */
+}
+
+.intro-image img{
+  animation: fadeInImage 2s ease-in-out, mover 2s infinite  alternate;
+}
+
+/* Style for the dropdown box */
+#experience {
+  animation: fadeInUp 2s;
+}
+
+#experience .dropdown-box {
+  animation: fadeInUp 2s;
+}
+
+
+.dropdown-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

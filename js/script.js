@@ -74,3 +74,41 @@ document.addEventListener('click', function (event) {
   }
 });
 
+
+function toggleExperience() {
+  const experienceContent = document.getElementById('experience-content');
+  const isHidden = experienceContent.style.display === 'none' || !experienceContent.style.display;
+  experienceContent.style.display = isHidden ? 'block' : 'none';
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("search-input").addEventListener("input", function () {
+    const searchTerm = this.value.toLowerCase();
+    const projectBoxes = document.querySelectorAll(".project-box");
+
+    projectBoxes.forEach(box => {
+      // Get the title
+      const title = box.querySelector("h3").textContent.toLowerCase();
+
+      // Get the description
+      const descriptionElement = box.querySelector("p");
+      const description = descriptionElement ? descriptionElement.textContent.toLowerCase() : "";
+
+      // Get the tools
+      const toolsElements = box.querySelectorAll(".tools");
+      let tools = "";
+      toolsElements.forEach(tool => {
+        tools += tool.textContent.toLowerCase() + " ";
+      });
+
+      // Check if any of the content matches the search term
+      if (title.includes(searchTerm) || description.includes(searchTerm) || tools.includes(searchTerm)) {
+        box.style.display = "block";
+      } else {
+        box.style.display = "none";
+      }
+    });
+  });
+});
+

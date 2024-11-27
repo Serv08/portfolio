@@ -1,4 +1,11 @@
-/* Global Styles */
+/* 
+  ===========================
+  Global Styles 
+  ===========================
+*/
+html {
+  /* background-color: rgb(51, 136, 255); */
+}
 
 body::-webkit-scrollbar {
   display: none; /* Hides the scrollbar in WebKit browsers (e.g., Chrome, Edge, Safari) */
@@ -10,6 +17,14 @@ body {
   padding: 0;
   overflow-y: scroll; /* Ensures vertical scrolling is always enabled */
 }
+
+
+
+/* 
+  ===========================
+  Header and Main
+  ===========================
+*/
 
 header {
   background-color: #333;
@@ -67,7 +82,49 @@ main h1 {
   color: #333;
 }
 
+
+/* 
+  ===========================
+  PROJECTS
+  ===========================
+*/
+
 /* Filter Buttons */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 780px) {
+  .filter-buttons {
+    margin: 5px 0; /* Adds more vertical spacing */
+  }
+
+  .filter-buttons button {
+    padding: 10px 15px; /* Increased padding for larger touch areas on mobile */
+    margin: 5px; /* Adds more vertical spacing between buttons */
+    font-size: 0.9rem; /* Slightly larger font size for better readability */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .filter-buttons {
   text-align: center;
   margin: 10px 0px;
@@ -78,16 +135,6 @@ main h1 {
   z-index: 900; /* Ensures it appears above content but below the navigation bar */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   animation: fadeInDown 0.6s ease-in-out;
-}
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-5%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .filter-buttons button {
@@ -106,20 +153,6 @@ main h1 {
   background-color: #0056b3;
 }
 
-/* Responsive Adjustments for Mobile Devices */
-@media (max-width: 780px) {
-  .filter-buttons {
-    margin: 5px 0; /* Adds more vertical spacing */
-  }
-
-  .filter-buttons button {
-    padding: 10px 15px; /* Increased padding for larger touch areas on mobile */
-    margin: 5px; /* Adds more vertical spacing between buttons */
-    font-size: 0.9rem; /* Slightly larger font size for better readability */
-  }
-}
-
-
 /* Project List */
 .project-list {
   display: flex;
@@ -130,6 +163,7 @@ main h1 {
   min-height: 200px; /* Prevents collapse when no projects are visible */
   transition: all 0.3s ease; /* Smooth transition when projects are filtered */
 }
+
 
 /* Project Box Styling */
 .project-box {
@@ -142,22 +176,8 @@ main h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.project-box {
   animation: fadeInUp 0.6s ease-in-out;
 }
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
 .project-box:hover {
   transform: translateY(-10px);
@@ -249,14 +269,41 @@ main h1 {
   -webkit-animation: mover 2s infinite  alternate;
   animation: mover 2s infinite  alternate;
 }
-@-webkit-keyframes mover {
-0% { transform: translateY(0); }
-100% { transform: translateY(-20px); }
-}
 @keyframes mover {
 0% { transform: translateY(0); }
 100% { transform: translateY(-20px); }
 }
+
+
+
+/* Style for Search Bar */
+.search-bar {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+#search-input:focus {
+  border-color: #007bff;
+}
+
+
+
+/* 
+  ===========================
+  Home Page
+  ===========================
+*/
 
 .welcome-container p{
   font-size: large;
@@ -268,9 +315,6 @@ main h1 {
 .home-intro p{
   text-wrap: normal;
 }
-
-
-
 
 /* About Me and Skills Section */
 #about-me, #skills {
@@ -300,7 +344,6 @@ main h1 {
   margin-bottom: 8px;
   font-size: 1rem;
 }
-
 
 
 /* Skills Section */
@@ -402,7 +445,6 @@ main h1 {
   margin-right: 10px;
 }
 
-
 .intro-image img{
   display: inline-block;
   border-radius: 50%; 
@@ -425,7 +467,80 @@ main h1 {
 }
 
 
+/* Style for the dropdown box */
+#experience {
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeInUp 2s;
+}
 
+#experience .dropdown-box {
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeInUp 2s;
+}
+
+/* Dropdown button */
+.dropdown-btn {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background-color: #007bff; /* Button background */
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Content inside the dropdown */
+#experience-content {
+  padding: 15px;
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-item h3 {
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.experience-item p {
+  font-style: italic;
+  color: #666;
+}
+
+.experience-item ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.experience-item ul li {
+  margin-bottom: 5px;
+}
+
+
+/* 
+  ===========================
+  Contact
+  ===========================
+*/
 
 /* Contact Overlay */
 #contact-overlay {
@@ -469,3 +584,8 @@ main h1 {
   transform: scale(1); /* Scale up */
   opacity: 1; /* Fully visible */
 }
+
+#contact-content {
+  margin-top: 20px;
+}
+

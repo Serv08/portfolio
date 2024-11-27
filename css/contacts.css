@@ -1,0 +1,38 @@
+/* 
+  ===========================
+  Contact
+  ===========================
+*/
+
+/* Contact Overlay */
+#contact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 
+  ======================
+  Contact Box
+  ======================
+ */
+#contact-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  max-width: 90%; /* Adjust for mobile responsiveness */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#contact-content {
+  margin-top: 20px;
+}

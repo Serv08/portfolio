@@ -1,0 +1,99 @@
+/* Filter Buttons */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+  }
+
+.filter-buttons {
+  animation: fadeInDown 0.6s ease-in-out;
+}
+
+.filter-buttons button {
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Project List */
+.project-list {
+  transition: all 0.3s ease; /* Smooth transition when projects are filtered */
+}
+
+
+/* Project Box Styling */
+.project-box {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+.project-box:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient background on hover */
+  color: white;
+}
+
+.project-box img {
+  transition: border-color 0.3s ease;
+}
+
+.project-box:hover img {
+  border-color: #007BFF; /* Change border color on hover */
+}
+
+.project-box h3 {
+  transition: color 0.3s ease;
+}
+
+.project-box:hover h3 {
+  color: white; /* Adjust to match hover color scheme */
+}
+
+.project-box a {
+  transition: background-color 0.3s ease;
+}
+
+.project-box a:hover {
+  background-color: #0056b3;
+}
+
+/* Smooth Transition for Filtering */
+.project-box {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-box.hidden {
+  opacity: 0;
+  transform: scale(0.9); /* Shrinks slightly when hidden */
+  pointer-events: none;
+  position: absolute; /* Takes out hidden elements from the layout */
+}
+
+.welcome-container img{
+  animation: mover 2s infinite  alternate;
+}

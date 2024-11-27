@@ -1,0 +1,40 @@
+/* 
+  ===========================
+  Contact
+  ===========================
+*/
+
+/* Contact Overlay */
+#contact-overlay {
+  z-index: 1000;
+  opacity: 0; /* Start hidden */
+  pointer-events: none; /* Prevent interactions when not visible */
+  transition: opacity 0.3s ease; /* Smooth fade-in and fade-out */
+}
+
+/* Show the overlay when active */
+#contact-overlay.active {
+  opacity: 1;
+  pointer-events: all; /* Allow interactions */
+}
+
+/* 
+  ======================
+  Contact Box
+  ======================
+ */
+#contact-box {
+  transform: scale(0.8); /* Start slightly smaller */
+  opacity: 0; /* Hidden initially */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+}
+
+/* Show the box when overlay is active */
+#contact-overlay.active #contact-box {
+  transform: scale(1); /* Scale up */
+  opacity: 1; /* Fully visible */
+}
+
+#contact-content {
+  margin-top: 20px;
+}

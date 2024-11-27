@@ -1,0 +1,129 @@
+html {
+    /* background-color: rgb(51, 136, 255); */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar in WebKit browsers (e.g., Chrome, Edge, Safari) */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll; /* Ensures vertical scrolling is always enabled */
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  position: sticky; /* Makes the header sticky */
+  top: 0; /* Sticks to the top of the viewport */
+  z-index: 1000; /* Ensures it stays above other content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px; /* Add padding for a cleaner look */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+  color: black;
+  background-color: white; /* Adds a hover effect for all buttons */
+  border-radius: 5px; /* Slight rounding for a modern look */
+}
+
+nav ul li#contact a {
+  background-color: #9dc8f6; /* Unique background color for the contact item */
+  color: black; /* Contrast text color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 8px 15px; /* Slightly larger padding for emphasis */
+}
+
+nav ul li#contact a:hover {
+  background-color: #014792; /* Darker shade on hover */
+  color: white; /* Invert text color on hover */
+}
+
+main {
+  padding: 5px;
+  text-align: center;
+}
+
+main h1 {
+  color: #333;
+}
+
+
+
+/* 
+  ===========================
+  Contact
+  ===========================
+*/
+
+/* Contact Overlay */
+#contact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0; /* Start hidden */
+  pointer-events: none; /* Prevent interactions when not visible */
+  transition: opacity 0.3s ease; /* Smooth fade-in and fade-out */
+}
+
+/* Show the overlay when active */
+#contact-overlay.active {
+  opacity: 1;
+  pointer-events: all; /* Allow interactions */
+}
+
+/* 
+  ======================
+  Contact Box
+  ======================
+ */
+#contact-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  max-width: 90%; /* Adjust for mobile responsiveness */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: scale(0.8); /* Start slightly smaller */
+  opacity: 0; /* Hidden initially */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+}
+
+/* Show the box when overlay is active */
+#contact-overlay.active #contact-box {
+  transform: scale(1); /* Scale up */
+  opacity: 1; /* Fully visible */
+}
+
+#contact-content {
+  margin-top: 20px;
+}

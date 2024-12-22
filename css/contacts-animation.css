@@ -35,6 +35,12 @@
   opacity: 1; /* Fully visible */
 }
 
-#contact-content {
-  margin-top: 20px;
+
+#contact-content img:hover {
+  transform: scale(1.5); /* Slightly larger on hover */
+  transition: transform 0.3s ease;
+}
+
+#contact-content img {
+  transition: transform 0.3s ease; /* Ensure smooth transition when hover is removed */
 }
